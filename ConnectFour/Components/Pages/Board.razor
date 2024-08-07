@@ -13,13 +13,11 @@
 </HeadContent>
 
 <nav>
-    <span title="Click to play a piece" @onclick="() => PlayPiece(1)">🔽</span>
-    <span title="Click to play a piece" @onclick="() => PlayPiece(2)">🔽</span>
-    <span title="Click to play a piece" @onclick="() => PlayPiece(3)">🔽</span>
-    <span title="Click to play a piece" @onclick="() => PlayPiece(4)">🔽</span>
-    <span title="Click to play a piece" @onclick="() => PlayPiece(5)">🔽</span>
-    <span title="Click to play a piece" @onclick="() => PlayPiece(6)">🔽</span>
-    <span title="Click to play a piece" @onclick="() => PlayPiece(7)">🔽</span>
+    @for (byte i = 0; i < 7; i++)
+    {
+        var col = i;
+        <span title="Click to play a piece" @onclick="() => PlayPiece(col)">🔽</span>
+    }
 </nav>
 
 <div>
